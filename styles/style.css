@@ -149,22 +149,22 @@ body {
     box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.342);
 }
 
-q {
+blockquote {
     opacity: 70%;
     font-size: .875rem;
     line-height: 1.25rem;
 }
 
-div.light {
+.light {
     color: var(--Light-gray);
 }
 
-div.dark {
+.dark {
     color: var(--Very-dark-grayish-blue);
 }
 
 
-div#daniel {
+figure#daniel {
     background-color: var(--Moderate-violet);
     background-image: url(../images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
@@ -173,26 +173,26 @@ div#daniel {
     grid-area: one;
 } 
 
-div#jonathan {
+figure#jonathan {
     background-color: var(--Very-dark-grayish-blue);
     grid-area: two;
 }
 
-div#jeanette {
+figure#jeanette {
     background-color: var(--White);
     grid-area: three;
 }
 
-div#patrick {
+figure#patrick {
     background-color: var(--Very-dark-blackish-blue);
     grid-area: four;
 }
 
-div#patrick img {
+figure#patrick img {
     border: 1px solid var(--Moderate-violet);
 }
 
-div#kira {
+figure#kira {
     background-color: var(--White);
     grid-area: five;
 }
