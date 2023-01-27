@@ -214,7 +214,9 @@ figure#kira {
   grid-area: five;
 }
 
-@media screen and (min-width: 768px) {
+/* Media query for tablets */
+
+@media screen and (min-width: 48em) {
   body {
     justify-content: flex-start;
   }
@@ -228,7 +230,7 @@ figure#kira {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75em) {
   body {
     justify-content: center;
   }
