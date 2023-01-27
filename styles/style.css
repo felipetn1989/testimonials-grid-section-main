@@ -1,231 +1,243 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
-    /* Josh Comeau's CSS Reset */
+/* Josh Comeau's CSS Reset */
 
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5625rem;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5625rem;
+  -webkit-font-smoothing: antialiased;
+}
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-
-:root {
-    /* ### Primary */
-
---Moderate-violet: hsl(263, 55%, 52%);
---Very-dark-grayish-blue: hsl(217, 19%, 35%);
---Very-dark-blackish-blue: hsl(219, 29%, 14%);
---White: hsl(0, 0%, 100%);
-
-    /* ### Neutral */
-
---Light-gray: hsl(0, 0%, 81%);
---Light-grayish-blue: hsl(210, 46%, 95%);
-
-    /* Font weights */
---fw-medium: 500;
---fw-semibold: 600;
-
+#root,
+#__next {
+  isolation: isolate;
 }
 
+/* Colors and Fonts */
+
+:root {
+  /* ### Primary */
+
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Neutral */
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* Font weights */
+  --fw-medium: 500;
+  --fw-semibold: 600;
+}
+
+/* General Settings */
+
 body {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: var(--fw-medium);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    background-color: var(--Light-grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: var(--fw-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: var(--Light-grayish-blue);
 }
 
 .card {
-    display: grid;
-    gap: 2rem;
-    margin: 3rem 1.5rem;
-    grid-template-areas: 
-    'one'
-    'two'
-    'three'
-    'four'
-    'five';
+  display: grid;
+  gap: 1.75rem;
+  margin: 4rem 1.5rem;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
 }
 
 .personal_info {
-    display: grid;
-    grid-template-areas: 
-    'one two'
-    'one three';
-    place-items: center start;
-    grid-template-columns: 50px;
-    grid-template-rows: 1rem 1rem;
+  display: grid;
+  grid-template-areas:
+    "one two"
+    "one three";
+  place-items: center start;
+  grid-template-columns: 3.125rem;
+  grid-template-rows: 1rem 1rem;
 }
 
 .picture {
-    width: 1.75em;
-    border-radius: 50%;
-    grid-area: one;
-    border: 2px solid hsla(0, 0%, 81%, 0.5);   
+  width: 1.875em;
+  border-radius: 50%;
+  grid-area: one;
+  border: 2px solid hsla(0, 0%, 81%, 0.5);
 }
 
 .name {
-    grid-area: two;
-    font-size: .875rem;
-    /* transform: translateY(5px); */
+  grid-area: two;
+  font-size: 0.875rem;
 }
 
 .verified {
-    grid-area: three;
-    opacity: 50%;
-    font-size: .875rem;
-    /* transform: translateY(-5px); */
+  grid-area: three;
+  opacity: 50%;
+  font-size: 0.875rem;
 }
 
 .featured {
-    font-size: 1.3125rem;
-    font-weight: var(--fw-semibold);
+  font-size: 1.25rem;
+  font-weight: var(--fw-semibold);
 }
 
 .light > .featured {
-    color: var(--White);
+  color: var(--White);
 }
 
 .dark > .featured {
-    color: var(--Very-dark-grayish-blue);
+  color: var(--Very-dark-grayish-blue);
 }
 
 .card__testimonial {
-    padding: 2rem;
-    border-radius: .625rem;
-    display: grid;
-    gap: 1rem;
-    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.342);
+  padding: 1.5rem 2rem;
+  border-radius: 0.625rem;
+  display: grid;
+  gap: 1.25rem;
+  box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.342);
 }
 
 blockquote {
-    opacity: 70%;
-    font-size: .875rem;
-    line-height: 1.25rem;
+  opacity: 70%;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
 }
 
 .light {
-    color: var(--Light-gray);
+  color: var(--Light-gray);
 }
 
 .dark {
-    color: var(--Very-dark-grayish-blue);
+  color: var(--Very-dark-grayish-blue);
 }
 
-
 figure#daniel {
-    background-color: var(--Moderate-violet);
-    background-image: url(../images/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-position-x: 90%;
-    grid-area: one;
-} 
+  background-color: var(--Moderate-violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-position-x: 90%;
+  grid-area: one;
+}
 
 figure#jonathan {
-    background-color: var(--Very-dark-grayish-blue);
-    grid-area: two;
+  background-color: var(--Very-dark-grayish-blue);
+  grid-area: two;
 }
 
 figure#jeanette {
-    background-color: var(--White);
-    grid-area: three;
+  background-color: var(--White);
+  grid-area: three;
 }
 
 figure#patrick {
-    background-color: var(--Very-dark-blackish-blue);
-    grid-area: four;
+  background-color: var(--Very-dark-blackish-blue);
+  grid-area: four;
 }
 
 figure#patrick img {
-    border: 1px solid var(--Moderate-violet);
+  border: 1px solid var(--Moderate-violet);
 }
 
 figure#kira {
-    background-color: var(--White);
-    grid-area: five;
+  background-color: var(--White);
+  grid-area: five;
 }
 
-@media screen and (min-width:768px) {
-    body {
-        justify-content: flex-start;
-    }
+@media screen and (min-width: 768px) {
+  body {
+    justify-content: flex-start;
+  }
 
-    .card {
-        grid-template-areas: 
-        'one one'
-        'two three'
-        'four four'
-        'five five'
-        ;
-    }
+  .card {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "four four"
+      "five five";
+  }
 }
 
-@media screen and (min-width:1200px) {
-    body {
-        justify-content: center;
+@media screen and (min-width: 1200px) {
+  body {
+    justify-content: center;
+  }
 
-    }
-
-    .card {
-        grid-template-areas: 
-        'one one two five'
-        'three four four five';
-        width: 80vw;
-        grid-auto-columns: 1fr;
-    }
-
+  .card {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+    width: 80vw;
+    grid-auto-columns: 1fr;
+  }
 }
-
-
